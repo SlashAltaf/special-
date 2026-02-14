@@ -206,7 +206,7 @@ canvas{
 <section class="parallaxcopy section3">
     <div class="overlay"></div>
     <div class="content">
-        <h1>Your Caring Heart💗</h1>
+        <h1>You are Caring Heart💗</h1>
         <p>You care about me in ways no one ever has. <br><br>You have a very big heart jo ki mera hai. <br><br> aj bhi milne se phele woh starting wala DHAK DHAK DHAK hota hai💕 <br><br> i glad that you gave me your heart!! <br><br> You are very kind and soft hearted person which attracts me a lot💕<br><br>i know tu dikhati hai that you are strong jo ki tu hai but i know a soft girl inside you. bhot hi pyaari cutu babyyyy 😚😚😚<br><br>LOTS OF LOVE TO YOU!!! 💕</p>
     </div>
 </section>
@@ -217,12 +217,12 @@ canvas{
   
     <div class="content">
         <h1>💍 When we Together!</h1>
-        <p>we both acting like a child, we love like adults, we enjoy like we are the only ones.<br><br> The every hour every mintute every second is special with you.<br><br> i love apna touchy touchy hona.<br><br> i love our romantice moments.<br><br> i love to see you happy with me!!</p>
+        <p>we both acting like a child, we love like adults, we enjoy like we are the only ones.<br><br> The every hour every mintute every second is special with you.<br><br> i love apna touchy touchy hona.<br><br> i love our romantic moments.<br><br> i love to see you happy with me!!</p>
     </div>
 </section>
 <section class="parallax section5">
     <div class="overlay"></div>
-      <canvas id="fireworks"></canvas>
+     
     <div class="content">
         <h1>I LOVE YOU SOO SOO MUCH VAISHHH MERI SENORITAAA💗💗💗💗💗</h1>
         <p>BHOT SARI PUCHIESSS MUUUUUUUUUUUHHHHAAAAA MMMUUUHHHHHHHAAAAAA MMMMUUUUUHHHHAAAAAAAA MMMMUUUUUUUHHHHAAAAAA 😚😚😚😚😚</p>
@@ -261,28 +261,9 @@ function createHeart(){
 }
 setInterval(createHeart,500);
 
-/* Fireworks */
-const canvas=document.getElementById("fireworks");
-const ctx=canvas.getContext("2d");
 
-function resizeCanvas(){
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-function firework(){
-    const x=Math.random()*canvas.width;
-    const y=Math.random()*canvas.height/2;
-    const radius=Math.random()*3+2;
-    ctx.beginPath();
-    ctx.arc(x,y,radius,0,Math.PI*2);
-    ctx.fillStyle=`hsl(${Math.random()*360},100%,60%)`;
-    ctx.fill();
-}
-setInterval(firework,250);
 </script>
 
 </body>
 </html>
+
