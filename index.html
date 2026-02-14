@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html,body{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+    background:black;
+    color:white;
+}
+
+
+/* FLOATING HEARTS */
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:9999;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    animation: floatUp linear infinite;
+    opacity:0.8;
+}
+
+@keyframes floatUp{
+    0%{
+        transform: translateY(100vh) scale(0.6);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    100%{
+        transform: translateY(-10vh) scale(1.2);
+        opacity:0;
+    }
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background-image: url(pexels-alina-shvets-24301391-7185246.jpg);
+    background-size: contain;
+    position:relative;
+    z-index:2;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    width:100%;
+    max-width:420px;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+.card h1{
+    font-size:1.9rem;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:1rem;
+    margin-bottom:25px;
+    line-height:1.6;
+    color: black;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:active{
+    transform:scale(0.95);
+}
+
+/* SECTIONS */
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    position:relative;
+    z-index:2;
+}
+
+.parallax{
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.parallaxcopy{
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-attachment:fixed;
+}
+
+
+@media(max-width:768px){
+    .parallax{
+        background-attachment:scroll;
+    }
+}
+
+.section1{background-image:url('pic-1.jpeg');}
+.section2{background-image:url('pic-2.jpeg');}
+.section3{background-image:url('pic-3.jpeg');}
+.section4{background-image:url('pic-4.jpeg');}
+.section5{background-image:url('pic-5.jpeg');}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.content{
+    position:relative;
+    z-index:3;
+    max-width:700px;
+}
+.content h1{font-size: 26px;}
+
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- AUDIO (MOBILE SAFE AUTOPLAY) -->
+<audio id="bgMusic" autoplay loop muted playsinline>
+    <source src="tuhi.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="card">
+        <h1>Happy Valentine’s Day Meri Senoritaaa💗</h1>
+        <p>This small website is just to show how special you are to me.  <br>(Click any where to start the song hehehehehehe)</p>
+        <button class="btn" onclick="scrollDown()">Tap To Feel My Love 💕</button>
+    </div>
+</div>
+
+<section class="parallaxcopy section1">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>"Chand bhi tumhe dekhe toh sharma jaye,<br> Phool bhi tumhari mehek se haar jaye,<br> kis kadar baya karu tumhari khoobsurati,<br> likhu toh ye duniya kam pad jaye!!!"</h1>
+    </div>
+</section>
+
+<section class="parallax section2">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>🌹 The Way You Smile</h1>
+        <p>Your smile can fix my worst days and make everything beautiful.<br><br> Your Smile is so cute my cutu babyyyy!!! <br><br> i love the khikhikhi wala time with you <br><br> Your smile is like mere dill ka Sukoon! <br><br> SO KEEP SMILING MERA BOONDI KA LADUUUUU!!</p>
+    </div>
+</section>
+
+<section class="parallaxcopy section3">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Your Caring Heart💗</h1>
+        <p>You care about me in ways no one ever has. <br><br>You have a very big heart jo ki mera hai. <br><br> aj bhi milne se phele woh starting wala DHAK DHAK DHAK hota hai💕 <br><br> i glad that you gave me your heart!! <br><br> You are very kind and soft hearted person which attracts me a lot💕<br><br>i know tu dikhati hai that you are strong jo ki tu hai but i know a soft girl inside you. bhot hi pyaari cutu babyyyy 😚😚😚<br><br>LOTS OF LOVE TO YOU!!! 💕</p>
+    </div>
+</section>
+
+
+<section class="parallaxcopy section4">
+    <div class="overlay"></div>
+  
+    <div class="content">
+        <h1>💍 When we Together!</h1>
+        <p>we both acting like a child, we love like adults, we enjoy like we are the only ones.<br><br> The every hour every mintute every second is special with you.<br><br> i love apna touchy touchy hona.<br><br> i love our romantice moments.<br><br> i love to see you happy with me!!</p>
+    </div>
+</section>
+<section class="parallax section5">
+    <div class="overlay"></div>
+      <canvas id="fireworks"></canvas>
+    <div class="content">
+        <h1>I LOVE YOU SOO SOO MUCH VAISHHH MERI SENORITAAA💗💗💗💗💗</h1>
+        <p>BHOT SARI PUCHIESSS MUUUUUUUUUUUHHHHAAAAA MMMUUUHHHHHHHAAAAAA MMMMUUUUUHHHHAAAAAAAA MMMMUUUUUUUHHHHAAAAAA 😚😚😚😚😚</p>
+        <P>I know we are not toghter today but i hope i made your day special💕💕</P>
+        <p>Happy Valentine’s Day Meri Golu Molu💗</p>
+    </div>
+</section>
+
+<script>
+/* Unmute on first interaction */
+document.addEventListener("click", function(){
+    const music = document.getElementById("bgMusic");
+    music.muted = false;
+    music.play();
+}, { once:true });
+
+/* Scroll */
+function scrollDown(){
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
+
+
+/* Floating Hearts */
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*15+15)+"px";
+    heart.style.animationDuration=(Math.random()*4+4)+"s";
+    document.getElementById("hearts").appendChild(heart);
+    setTimeout(()=>heart.remove(),8000);
+}
+setInterval(createHeart,500);
+
+/* Fireworks */
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+function firework(){
+    const x=Math.random()*canvas.width;
+    const y=Math.random()*canvas.height/2;
+    const radius=Math.random()*3+2;
+    ctx.beginPath();
+    ctx.arc(x,y,radius,0,Math.PI*2);
+    ctx.fillStyle=`hsl(${Math.random()*360},100%,60%)`;
+    ctx.fill();
+}
+setInterval(firework,250);
+</script>
+
+</body>
+</html>
